@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+      "target": "esnext",
+      "module": "esnext",
+      "moduleResolution": "node",
+      "lib": [
+        "esnext",
+      ],
+      "esModuleInterop": true,
+      "experimentalDecorators": true,
+      "sourceMap": true,
+      "strict": true,
+      "noEmit": true,
+      "baseUrl": ".",
+      "types": [
+        "@types/node",
+        "@nuxt/types"
+      ]
+    },
+    "ts-node": {
+        "esm": true
+    },
+    "exclude": [
+      "node_modules"
+    ]
+  }
