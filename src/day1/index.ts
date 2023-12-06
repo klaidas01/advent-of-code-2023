@@ -1,8 +1,22 @@
-import minBy from "lodash/minBy";
 import { readFile } from "../utils";
 
-const main = async () => {
-  const lines = await readFile("./src/1.2/input.txt");
+const solve1 = async () => {
+  const lines = await readFile("./src/day1/input.txt");
+
+  let sum = 0;
+
+  for await (const line of lines) {
+    const first = [...line].find((x) => !isNaN(Number(x)));
+    const last = [...line].findLast((x) => !isNaN(Number(x)));
+
+    sum += Number(`${first}${last}`);
+  }
+
+  return sum;
+};
+
+const solve2 = async () => {
+  const lines = await readFile("./src/day1/input.txt");
 
   let sum = 0;
 
@@ -23,7 +37,15 @@ const main = async () => {
     sum += Number(`${first}${last}`);
   }
 
-  console.log(sum);
+  return sum;
+};
+
+const main = async () => {
+  const res1 = await solve1();
+  const res2 = await solve2();
+
+  console.log(`Part 1: ${res1}`);
+  console.log(`Part 2: ${res2}`);
 };
 
 main();
