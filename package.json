@@ -4,7 +4,8 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "1": "ts-node --experimental-specifier-resolution=node ./src/day1/index.ts"
+    "1": "ts-node --experimental-specifier-resolution=node ./src/day1/index.ts",
+    "2": "ts-node --experimental-specifier-resolution=node ./src/day2/index.ts"
   },
   "author": "",
   "license": "ISC",
